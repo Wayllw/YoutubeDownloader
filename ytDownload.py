@@ -1,15 +1,19 @@
 from pytube import YouTube
 import tkinter as tk
-
+import os
 
 def Download():
     link = title_entry.get()
     yt = YouTube(link)
 
     video = yt.streams.get_highest_resolution()
-    video.download("C:/YtDownload")
+    video.download(folder)
 
     window.destroy()
+
+
+folder = os.path.join(os.path.join(os.path.expanduser("~")),'desktop/YtDownload')
+
 
 
 window = tk.Tk()
