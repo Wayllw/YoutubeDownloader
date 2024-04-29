@@ -2,6 +2,7 @@ from pytube import YouTube
 import tkinter as tk
 import os
 
+
 def Download():
     #we get the video link provided in the window
     link = title_entry.get()
